@@ -1,0 +1,38 @@
+public class Ejercicio11 : MonoBehaviour
+{
+
+    int vida;
+    string Estado;
+    
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+     
+        if ( vida < 20)
+        {
+            Debug.Log(Estado = ("Critico"));
+        }
+        else if (vida > 20 && vida < 50)
+        {
+            Debug.Log(Estado = (" Herido "));
+        }
+        else if (vida > 50)
+        {
+            Debug.Log(Estado = ("Estable"));
+        }
+
+
+        Estado = (vida < 50) ? vida > 20? "Herido" : "critico" : "Estable";
+
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
