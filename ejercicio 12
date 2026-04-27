@@ -1,0 +1,29 @@
+public class Ejercicio12 : MonoBehaviour
+{
+
+    string Acceso;
+    bool Incombat;
+    bool HaveVIP;
+    int nivel;
+    
+    
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if ((nivel >= 10 || HaveVIP) && !Incombat)
+        {
+            Debug.Log("tiene acceso");
+        }
+
+
+
+        Acceso = ((nivel >= 10 || HaveVIP) && !Incombat) ? "Acceso permitido" : "Acceso denegado";
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
