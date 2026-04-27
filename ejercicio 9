@@ -1,0 +1,45 @@
+public class Ejercicio9 : MonoBehaviour
+{
+    int mana;
+    int stamina;
+    bool EnemyNearby;
+    string PuedeAtacar;
+
+    
+    
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+      
+        if ((mana > 50) && (stamina > 20) && EnemyNearby)
+        {
+            Debug.Log("Puedes Atarcar");
+        }
+        else
+        {
+            if (mana < 50)
+            {
+                Debug.Log("te falta mana");
+            }
+            if (stamina < 20)
+            {
+                Debug.Log("Recarga stamina");
+            }
+            if (!EnemyNearby)
+            {
+                Debug.Log("Acercate al enemigo");
+            }
+        }
+
+        PuedeAtacar = ((mana > 50) && (stamina > 20) && EnemyNearby) ? "Puedes Atacar" : "No puedes atacar";
+        Debug.Log(PuedeAtacar);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
