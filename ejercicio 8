@@ -1,0 +1,51 @@
+public class Ejercicio8 : MonoBehaviour
+{
+
+    bool HasKey;
+    bool InCombat;
+    int Nivel;
+    string OpenChest;
+    
+    
+    
+    
+    
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+        if ((HasKey || Nivel > 15) && !InCombat)
+        {
+            Debug.Log("puede abrir el cofre");
+        } 
+        else
+        {
+            if (InCombat)
+            {
+                Debug.Log("estas en combate no puedes abrir el cofre");
+            }
+            if (!HasKey)
+            {
+                Debug.Log("consigue la llave");
+            }
+            if (Nivel < 15)
+            {
+                Debug.Log("sube de nivel malo");
+            }
+        }
+
+
+        OpenChest = (HasKey || Nivel > 15 && !InCombat) ? "abriste el cofre" : "no abriste el cofre";
+        Debug.Log(OpenChest);
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
