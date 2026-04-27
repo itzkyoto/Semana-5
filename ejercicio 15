@@ -1,0 +1,37 @@
+public class Ejercicio15 : MonoBehaviour
+{
+
+    string Estado;
+    bool PlayerNearby;
+    bool SeePlayer;
+    int energia;
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (PlayerNearby && SeePlayer && energia > 50)
+        {
+            Debug.Log(Estado = ("atacar"));
+        }
+        else if (SeePlayer && energia >= 40)
+        {
+            Debug.Log(Estado = ("perseguir"));
+        }
+        else if (!SeePlayer && energia <= 20)
+        {
+            Debug.Log(Estado = ("Esperar"));
+        }
+
+        Estado = (PlayerNearby && SeePlayer && energia > 50) ? (SeePlayer && energia <= 40) ? "atacar" : "perseguir" : "esperar";
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
