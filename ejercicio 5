@@ -1,0 +1,41 @@
+public class Ejercicio5 : MonoBehaviour
+{
+//ejercicio del 5 al 15
+
+    int Weather;
+    int temperatura;
+    bool EstaLluviendo;
+    bool Estanevando;
+
+
+
+
+    void Start()
+    {
+        if (Weather >= 31)
+        {
+            Debug.Log(" esta soleado");
+        }
+       else if (Weather <=30 && Weather >=21)
+        {
+            Debug.Log("esta nublado");
+        }
+        else if (Weather <= 20 && Weather >=7 && EstaLluviendo == true)
+        {
+            Debug.Log(" esta lluviendo ");
+        }
+        else if (Weather <= 6 && Estanevando== true) 
+        {
+            Debug.Log(" esta nevando");
+        }
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
