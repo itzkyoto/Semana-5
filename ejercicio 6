@@ -1,0 +1,48 @@
+public class Ejercicio6 : MonoBehaviour
+{
+
+    bool HaveGun;
+    bool Havebullets;
+    bool IsStun;
+    string PuedoAtacar;
+    
+      
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (HaveGun && Havebullets && !IsStun)
+        {
+            Debug.Log("puede atacar");
+        }
+        else
+        {
+            if ( HaveGun == false)
+            {
+                Debug.Log("consigue una arma");
+            }
+            if (Havebullets == false)
+            {
+                Debug.Log("consigue municion");
+            }
+            if (IsStun == true)
+            {
+                Debug.Log("estas stuneado");
+            }
+        
+        
+        }
+
+        PuedoAtacar = (HaveGun && Havebullets && !IsStun) ? "puedes atacar" : " no puedes atacar";
+        Debug.Log(PuedoAtacar);
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
