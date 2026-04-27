@@ -1,0 +1,38 @@
+public class Ejercicio13 : MonoBehaviour
+{
+
+    string movimiento;
+    int stamina;
+
+
+    
+    
+    
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        if (stamina > 70)
+        {
+            Debug.Log(movimiento == ("sprint"));
+        }
+        else if (stamina > 30 )
+        {
+            Debug.Log(movimiento == ("Run"));
+        }
+        else if ( stamina <= 29)
+        {
+            Debug.Log(movimiento = ("Walk"));
+        }
+
+
+        movimiento = stamina > 30 ? stamina > 70 ? "sprint" : "run" : "walk";
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
