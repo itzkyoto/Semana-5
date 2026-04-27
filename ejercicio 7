@@ -1,0 +1,44 @@
+public class Ejercicio7 : MonoBehaviour
+{
+
+    bool Tienepoción;
+    bool ZonaSegura;
+    bool IsDead;
+    string TePuedesCurar;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+        if (Tienepoción && ZonaSegura && !IsDead)
+        {
+            Debug.Log("puedes curarte");
+        }
+        else
+        {
+            if (IsDead)
+            {
+                Debug.Log("no te puedes curar estas muerto");
+            }
+            if (!Tienepoción)
+            {
+                Debug.Log("No tienes pociones");
+            }
+            if (!ZonaSegura)
+            {
+                Debug.Log("no estas en zona segura");
+            }
+        
+        }
+
+        TePuedesCurar = (Tienepoción && ZonaSegura && !IsDead) ? "Te puedes curar" : "No te puedes curar";
+        Debug.Log (TePuedesCurar);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
