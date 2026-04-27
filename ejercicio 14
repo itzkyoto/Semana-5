@@ -1,0 +1,41 @@
+public class Ejercicio14 : MonoBehaviour
+{
+
+    bool Critico;
+    bool EnemigoVulnerable;
+    float daño;
+
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+      if (Critico &&  EnemigoVulnerable)
+        {
+            Debug.Log(daño * 2);
+        }
+        else if (Critico)
+        {
+            Debug.Log(daño * 1.5);
+        }
+        else if (!Critico)
+        {
+            Debug.Log(daño * 1);
+        }
+
+
+
+        daño = Critico && EnemigoVulnerable ? !EnemigoVulnerable ? daño * 2 : daño * 1.5f : daño;
+    
+    
+    
+    
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
